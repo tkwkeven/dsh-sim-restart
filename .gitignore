@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Build / temp
+*.log
+*.tgz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

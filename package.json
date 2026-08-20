@@ -1,0 +1,44 @@
+{
+  "name": "dsh-sim-restart",
+  "version": "0.3.0",
+  "description": "Simulated-restart test plugin for DeepSeek Harness: validates that a plugin survives a process restart (module eval → shape → apply → smoke run → dispose → clean exit) in an isolated subprocess, without actually restarting DSH. A resident watcher auto-tests plugins on install/modify/remove and pushes failure diagnostics back to the agent until all pass.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./engine": {
+      "default": "./lib/engine.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node test/self-test.mjs",
+    "check": "node --check lib/index.js && node --check lib/engine.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkwkeven/dsh-sim-restart.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "testing",
+    "restart",
+    "agent"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1",
+    "@deepseek-ai/dsh-tools": ">=0.1.0-rc.6"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
