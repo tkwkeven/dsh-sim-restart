@@ -1,5 +1,7 @@
 # dsh-sim-restart
 
+> [English](README.md) · [中文](README.zh-CN.md)
+
 <p align="center">
   <img src="https://img.shields.io/github/license/tkwkeven/dsh-sim-restart" alt="License">
   <img src="https://img.shields.io/github/stars/tkwkeven/dsh-sim-restart" alt="GitHub stars">
