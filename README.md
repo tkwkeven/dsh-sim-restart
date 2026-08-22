@@ -1,5 +1,13 @@
 # dsh-sim-restart
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/tkwkeven/dsh-sim-restart" alt="License">
+  <img src="https://img.shields.io/github/stars/tkwkeven/dsh-sim-restart" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/tkwkeven/dsh-sim-restart" alt="GitHub forks">
+  <img src="https://img.shields.io/github/last-commit/tkwkeven/dsh-sim-restart" alt="Last commit">
+  <img src="https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f46e5" alt="DSH plugin">
+</p>
+
 Simulated-restart testing for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) plugins. Without actually restarting the DSH process, it runs each plugin through the full restart path — **process restart → module eval → plugin shape → `apply` start → smoke run → `dispose` cleanup → clean exit** — in an isolated subprocess, and reports whether the plugin would crash or hang after a real restart.
 
 A resident watcher auto-triggers these tests whenever any plugin is installed, modified, or removed, and pushes failure diagnostics into the agent's prompt until everything passes again.
